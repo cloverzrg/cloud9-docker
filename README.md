@@ -1,21 +1,23 @@
 # cloud9-docker
+
 cloud9 docker image
 
 cloud9-core https://github.com/c9/core
+
 ## run
 
 ### simple
 ```
 docker run -d -p 80:80 cloverzrg/cloud9 --auth username:password
 ```
-You don't need to look at the following if you just try it
+You don't need to read the following if you just try it .
 
 ### recommend
 ```
 docker run -d -m 256M -p 127.0.0.1:8090:80 -v $HOME/docker-volume/cloud9/workspace:/workspace -v $HOME/docker-volume/cloud9/user.settings:/root/.c9/user.settings cloverzrg/cloud9 --auth username:password
 ```
 ensure that the folder have right permissions.
-##### nginx conf
+##### nginx conf example
 ```
 server {
     listen 80;
