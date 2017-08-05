@@ -9,6 +9,7 @@ cloud9-core https://github.com/c9/core
 ### simple
 ```
 docker run -d -p 80:80 cloverzrg/cloud9 --auth username:password
+# use -a : to force no login
 ```
 You don't need to read the following if you just try it .
 
