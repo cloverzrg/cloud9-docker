@@ -39,11 +39,11 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
 # Environment
 ENV NODE_ENV "production"
-
+ENV LISTEN 0.0.0.0
 #RUN ln -s /etc/apt/sources.list sources.list
 
 # ------------------------------------------------------------------------------
 # Expose ports.
 EXPOSE 80
 
-ENTRYPOINT ["forever", "/cloud9/server.js", "-w", "/workspace", "--listen", "0.0.0.0","--port","80"]
+ENTRYPOINT ["forever", "/cloud9/server.js", "-w", "/workspace", "--listen", "$LISTEN","--port","80"]
