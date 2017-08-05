@@ -29,6 +29,7 @@ ADD configs configs
 RUN mkdir /workspace
 VOLUME /workspace
 
+RUN cp /usr/share/zoneinfo/PRC /etc/localtime && echo "Asia/shanghai" > /etc/timezone
 # ------------------------------------------------------------------------------
 # Clean up cache.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
@@ -38,7 +39,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
 # Environment
 ENV NODE_ENV "production"
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/shanghai" > /etc/timezone
+
 #RUN ln -s /etc/apt/sources.list sources.list
 
 # ------------------------------------------------------------------------------
