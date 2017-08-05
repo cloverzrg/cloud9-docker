@@ -36,10 +36,11 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && apt-get autoremove -y && apt-get autoclean -y && apt-get clean -y \
     && npm cache clean --force
 
-
+# Environment
 ENV NODE_ENV "production"
-RUN echo "Asia/shanghai" > /etc/timezone
-RUN ln -s /etc/apt/sources.list sources.list
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/shanghai" > /etc/timezone
+#RUN ln -s /etc/apt/sources.list sources.list
+
 # ------------------------------------------------------------------------------
 # Expose ports.
 EXPOSE 80
