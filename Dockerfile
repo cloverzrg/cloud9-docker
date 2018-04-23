@@ -21,8 +21,8 @@ WORKDIR /cloud9
 RUN scripts/install-sdk.sh
 
 # Add config file
-ADD settings settings
-ADD configs configs
+# ADD settings settings
+# ADD configs configs
 
 # ------------------------------------------------------------------------------
 # Add volumes
