@@ -7,7 +7,7 @@ RUN apt-get install -y apt-utils vim build-essential g++ curl wget libssl-dev \
 
 # ------------------------------------------------------------------------------
 # Install forever
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+# RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install -g forever
     
 # ------------------------------------------------------------------------------
