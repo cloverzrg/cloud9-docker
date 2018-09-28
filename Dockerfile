@@ -2,7 +2,7 @@ FROM ubuntu
 # ------------------------------------------------------------------------------
 # Install base & build tools
 RUN apt-get update -y && apt-get -y dist-upgrade
-RUN apt-get install -y apt-utils vim build-essential g++ curl wget libssl-dev \
+RUN apt-get install -y -f apt-utils vim build-essential g++ curl wget libssl-dev \
     apache2-utils git libxml2-dev sshfs tmux nodejs npm zip node-gyp
 
 # ------------------------------------------------------------------------------
