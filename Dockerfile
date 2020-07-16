@@ -3,7 +3,7 @@ FROM ubuntu
 # Install base & build tools
 RUN apt-get update -y && apt-get -y dist-upgrade
 RUN apt-get install -y -f --fix-broken apt-utils vim build-essential g++ curl wget libssl-dev \
-    apache2-utils git libxml2-dev sshfs tmux nodejs npm zip node-gyp nodejs-dev libssl1.0-dev
+    apache2-utils git libxml2-dev sshfs tmux nodejs npm zip node-gyp libssl1.0-dev
 
 # ------------------------------------------------------------------------------
 # Install forever
